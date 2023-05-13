@@ -1,0 +1,146 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+/*-------------------
+    VARIABLES
+--------------------*/
+:root {
+  --blue: #0060ff;
+  --dark: #202020;
+  --orange: #ff5219;
+  --white: #ffffff;
+  --green: #13c24d;
+  --purple: #6213ce;
+}
+/*-------------------
+    GLOBAL SETTINGS
+--------------------*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  /* 10px / 16px = 0.625
+     1rem = 10px
+  */
+
+  overflow-x: hidden;
+}
+body {
+  color: var(--blue-dark);
+  font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+  position: relative;
+}
+section {
+  padding-top: 12rem;
+}
+
+button {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+.sticky header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  width: 100%;
+  z-index: 999;
+  /* width: 75%; */
+  padding-top: 0;
+  height: 8rem;
+}
+
+/*-------------------
+  Buttons
+--------------------*/
+.btn {
+  padding: 1.8rem 3.6rem;
+  text-transform: uppercase;
+  border-radius: 8px;
+  color: var(--white);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+  transition: color 0.5s ease;
+  margin-bottom: 1rem;
+}
+
+/* *:focus {
+  border: 3px solid var(--orange);
+} */
+
+.main-btn {
+  background-color: var(--orange);
+}
+
+.dark-btn {
+  background-color: var(--dark);
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  transition: width 0.5s ease;
+  z-index: -1;
+}
+
+.main-btn::before {
+  background-color: var(--dark);
+}
+
+.dark-btn::before {
+  background-color: var(--orange);
+}
+.main-btn:hover::before,
+.dark-btn:hover::before {
+  width: 100%;
+}
+
+.main-btn:hover,
+.dark-btn:hover {
+  /* color: var(--orange); */
+  z-index: 1;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.white {
+  color: var(--white);
+}
